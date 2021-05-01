@@ -1,0 +1,52 @@
+.List {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 0;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+}
+
+.List h4 {
+  text-transform: uppercase;
+}
+
+.List .Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.List .Header .Label {
+  padding: 10px;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+}
+
+@keyframes enable {
+  0% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@media(min-width: 600px) {
+  .List {
+    width: 850px;
+  }
+
+  .List .Header .Label {
+    width: 150px;
+  }
+}

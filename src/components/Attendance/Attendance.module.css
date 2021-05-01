@@ -1,0 +1,23 @@
+.Attendance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.Label {
+  padding: 10px;
+  width: auto;
+  text-align: center;
+}
+
+.Label .Button {
+  display: inline-block;
+  margin-left: 70px !important;
+}
+
+@media(min-width: 600px) {
+  .Label {
+    width: 150px;
+  }
+}

@@ -1,0 +1,23 @@
+.ClassForm {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.ClassForm h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media(min-width: 600px) {
+  .ClassForm {
+    width: 950px;
+    height: auto;
+  }
+}
