@@ -8,6 +8,8 @@
   - A teacher should be able to log in, create new classes / edit old classes, see who has claimed they have attended a particular class, and then approve / reject claims.
   - An admin should be able to do everything.
 
+# Application for monitoring attendance url
+Hosting URL: https://attendance-68c8a.web.app
 
 ## Available Scripts
 
