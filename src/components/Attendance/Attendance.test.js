@@ -2,7 +2,6 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Attendance from './Attendance';
-import Button from '../UI/Button/Button';
 
 configure({ adapter: new Adapter() });
 
