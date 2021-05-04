@@ -9,7 +9,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Aux from '../../hoc/Aux';
 import { updateObjectInArray } from '../../Utils/utility';
 
-class ClassesList extends Component {
+export class ClassesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
