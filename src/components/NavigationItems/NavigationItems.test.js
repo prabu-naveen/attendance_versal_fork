@@ -13,17 +13,17 @@ describe('<NavigationItems />', () => {
     wrapper = shallow(<NavigationItems />);
   });
 
-  it('should render two <NavigationItems /> elements if the user is a student', () => {
+  it('should render two <NavigationItem /> elements if the user is a student', () => {
     wrapper.setProps({ role: 'student' });
     expect(wrapper.find(NavigationItem)).toHaveLength(2);
   });
 
-  it('should render four <NavigationItems /> elements if the user is a teacher', () => {
+  it('should render four <NavigationItem /> elements if the user is a teacher', () => {
     wrapper.setProps({ role: 'teacher' });
     expect(wrapper.find(NavigationItem)).toHaveLength(4);
   });
 
-  it('should render four <NavigationItems /> elements if the user is an admin', () => {
+  it('should render four <NavigationItem /> elements if the user is an admin', () => {
     wrapper.setProps({ role: 'admin' });
     expect(wrapper.find(NavigationItem)).toHaveLength(4);
   });
