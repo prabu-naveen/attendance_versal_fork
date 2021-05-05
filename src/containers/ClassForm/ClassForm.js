@@ -33,8 +33,8 @@ class ClassForm extends Component {
       startDate: {
         elementType: 'input',
         elementConfig: {
-          type: 'text',
-          placeholder: 'Start date (MM/DD/YYYY)',
+          type: 'date',
+          placeholder: 'Start date (dd/mm/yyyy)',
         },
         label: 'Start date',
         value: '',
@@ -51,8 +51,8 @@ class ClassForm extends Component {
       endDate: {
         elementType: 'input',
         elementConfig: {
-          type: 'text',
-          placeholder: 'End date (MM/DD/YYYY)',
+          type: 'date',
+          placeholder: 'End date (dd/mm/yyyy)',
         },
         label: 'End date',
         value: '',
@@ -79,9 +79,9 @@ class ClassForm extends Component {
       const course = courses.find((data) => data.key === this.classId);
       this.initialState.classForm.name.value = course.name;
       this.initialState.classForm.name.valid = true;
-      this.initialState.classForm.startDate.value = moment(course.startDate).format('MM/DD/YYYY');
+      this.initialState.classForm.startDate.value = moment(course.startDate).format('YYYY-MM-DD');
       this.initialState.classForm.startDate.valid = true;
-      this.initialState.classForm.endDate.value = moment(course.endDate).format('MM/DD/YYYY');
+      this.initialState.classForm.endDate.value = moment(course.endDate).format('YYYY-MM-DD');
       this.initialState.classForm.endDate.valid = true;
       this.initialState.formIsValid = true;
     }
@@ -120,8 +120,8 @@ class ClassForm extends Component {
     const { name, startDate, endDate } = classForm;
     const classData = {
       name: name.value,
-      startDate: moment(startDate.value, 'MM/DD/YYYY').valueOf(),
-      endDate: moment(endDate.value, 'MM/DD/YYYY').valueOf(),
+      startDate: moment(startDate.value, 'YYYY-MM-DD').valueOf(),
+      endDate: moment(endDate.value, 'YYYY-MM-DD').valueOf(),
     };
     if (this.classId) {
       const { ondEditClass, token } = this.props;
@@ -149,7 +149,7 @@ class ClassForm extends Component {
       validationError = !isValid ? `Max length required ${rules.maxLength}!` : '';
     }
     if (rules.date && isValid) {
-      isValid = moment(value, 'MM/DD/YYYY', true).isValid();
+      isValid = moment(value, 'YYYY-MM-DD').isValid();
       validationError = !isValid ? 'Date incorrect' : '';
     }
     return { isValid, validationError };

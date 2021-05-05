@@ -11,7 +11,7 @@ const attendance = (props) => {
     attendanceUser = (
       <Aux>
         <div className={classes.Label}>{props.label}</div>
-        <div className={classes.Label}>{moment(props.endDate).format('MM/DD/YYYY')}</div>
+        <div className={classes.Label}>{moment(props.endDate).format('DD/MM/YYYY')}</div>
         <div className={classes.Label}>
           <input
             name="attended"
@@ -28,7 +28,7 @@ const attendance = (props) => {
     attendanceUser = (
       <Aux>
         <div className={classes.Label}>{props.label}</div>
-        <div className={classes.Label}>{moment(props.endDate).format('MM/DD/YYYY')}</div>
+        <div className={classes.Label}>{moment(props.endDate).format('DD/MM/YYYY')}</div>
         <div className={classes.Label}>
           <Button
             clicked={props.clicked}
@@ -44,7 +44,7 @@ const attendance = (props) => {
     attendanceUser = (
       <Aux>
         <div className={classes.Label}>{props.label}</div>
-        <div className={classes.Label}>{moment(props.endDate).format('MM/DD/YYYY')}</div>
+        <div className={classes.Label}>{moment(props.endDate).format('DD/MM/YYYY')}</div>
         <div className={classes.Label}>
           <input
             name="attended"

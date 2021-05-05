@@ -77,7 +77,7 @@ export const approveRejectFail = () => ({
 export const fetchClasses = (token, role, userId) => async (dispatch) => {
   try {
     dispatch(fetchClassesStart());
-    const today = moment(new Date(), 'MM/DD/YYYY').valueOf();
+    const today = moment(new Date(), 'YYYY-MM-DD').valueOf();
     let queryParams = '';
     if (role === 'student') {
       queryParams = `?auth=${token}&orderBy="endDate"&endAt=${today}`;
@@ -117,7 +117,7 @@ export const fetchClasses = (token, role, userId) => async (dispatch) => {
 export const fetchAttendedClasses = (token) => async (dispatch) => {
   try {
     dispatch(fetchClassesStart());
-    const today = moment(new Date(), 'MM/DD/YYYY').valueOf();
+    const today = moment(new Date(), 'YYYY-MM-DD').valueOf();
     const queryParams = `?auth=${token}&orderBy="endDate"&endAt=${today}`;
     const response = await instance.get(`classes.json${queryParams}`);
     const users = await instance.get(`/users.json?auth=${token}`);
